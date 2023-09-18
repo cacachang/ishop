@@ -1,0 +1,31 @@
+
+<%= form_with model: @profile, url: 'profile_path' do |f| %>
+
+  <div class="flex items-center mb-4 field">
+    <%= f.label :name, '姓名' , class: 'mr-4' %><br />
+    <%= f.text_field :name, autocomplete: "email", class: 'rounded-md' %>
+  </div>
+
+  <div class="flex items-center mb-4 field">
+    <%= f.label :address, '地址' , class: 'mr-4' %><br />
+    <%= f.text_field :address, class: 'rounded-md' %>
+  </div>
+
+  <div class="flex items-center mb-4 field">
+    <%= f.label :phone, '電話' , class: 'mr-4' %><br />
+    <%= f.phone_field :phone, class: 'rounded-md' %>
+  </div>
+
+  <div class="flex items-center mb-4 field">
+    <%= f.label :gender, '性別' , class: 'mr-4' %><br />
+    <%= f.text_field :gender, class: 'rounded-md' %>
+  </div>
+
+  <div class="flex items-center mb-4 field">
+    <%= f.label :birthday, '生日' , class: 'mr-4' %><br />
+    <%= f.date_field :birthday, class: 'rounded-md' %>
+  </div>
+
+  <%= f.submit '送出', class: 'bg-slate-500 p-2 text-white rounded-md' %>
+
+<% end %>

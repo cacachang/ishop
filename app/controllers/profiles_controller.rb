@@ -11,21 +11,21 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
 
     if @profile.save
-      redirect_to profile_path
+      redirect_to profiles_path
     else 
       render :new, notice: '資料有誤'
     end
   end
 
   def edit
-    @profile = current_user.profile
+    @profile = helpers.current_user.profile
   end
 
   def update
-    @profile = current_user.profile
+    @profile = helpers.current_user.profile
 
     if @profile.update(profile_params)
-      redirect_to root_path
+      redirect_to profile_path
     else
       render :edit, notice: '無法更新'
     end
