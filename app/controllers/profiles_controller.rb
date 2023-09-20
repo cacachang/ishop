@@ -34,6 +34,6 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:name, :address, :phone, :gender, :birthday).merge(user: current_user)
+    params.require(:profile).permit(:name, :address, :phone, :gender, :birthday, :avatar).merge(user: current_user)
   end
 end

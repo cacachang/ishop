@@ -1,5 +1,11 @@
 
-<%= form_with model: @profile, url: 'profile_path' do |f| %>
+<%= form_with model: @profile, url: profiles_path do |f| %>
+
+
+  <div class="flex items-center mb-4 field">
+    <%= f.label :avatar, '大頭貼' , class: 'mr-4' %><br />
+    <%= f.file_field :avatar, class: 'rounded-md' %>
+  </div>
 
   <div class="flex items-center mb-4 field">
     <%= f.label :name, '姓名' , class: 'mr-4' %><br />
